@@ -1,0 +1,2 @@
+#!/bin/bash
+env WIPENREFIX=/home/flawless-gentoo/media/.wine-wow/ wine /home/flawless-gentoo/media/.wine-wow/drive_c/Program\ Files\ \(x86\)/Battle.net/Battle.net.exe

@@ -1,0 +1,4 @@
+process attached
+Tue Apr 08 21:17:46 2014 [GAME] Tried to send a Util packet before login was complete, ignoring
+Tue Apr 08 21:17:46 2014 [MAIN] defaulting aurora.version.source='product' (code 5)
+Tue Apr 08 21:17:46 2014 [AURA] Marshal Error feature=9 event=35 code=4 name=
