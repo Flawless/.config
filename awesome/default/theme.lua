@@ -12,7 +12,7 @@ set_dir = '/home/flawless-gentoo/.config/awesome'
 --DeepPink	#FF1493
 --IndianRed	#CD5C5C
 
-theme.font          = "terminus 8"
+theme.font          = "anonymuspro bold 8"
 
 theme.bg_normal = "#212121"
 theme.bg_focus = "#B22222"
