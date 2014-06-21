@@ -110,11 +110,11 @@ vicious.register(netwidget, vicious.widgets.net, function(widget, args)
     else
         return ""
     end
-    return args["{"..interface.." down_kb}"].." " end, 2)
+    return args["{"..interface.." down_kb}"].." " end, 5)
 
 --{{ Battery Widget }} --
 batwidget = wibox.widget.textbox()
-vicious.register( batwidget, vicious.widgets.bat, "<span color='#CC9393'>BAT</span>:$2$1$3 ", 30, "BAT0" )
+vicious.register( batwidget, vicious.widgets.bat, "<span color='#CC9393'>BAT</span>:$2$1$3 ", 60, "BAT0" )
 
 
 ----{{--| Volume / volume icon |----------
@@ -126,22 +126,22 @@ vicious.register(volume, vicious.widgets.volume, function(wigdet, args)
 		       end
 		    return "<span color='#CC9393'>VOL:</span>"..args[1]..mute_str.." " end,
 		    
-		 0.3, "Master")
+		 2, "Master")
 
 --{{--| Mail widget |---------
-mailicon = wibox.widget.imagebox()
+-- mailicon = wibox.widget.imagebox()
 
-vicious.register(mailicon, vicious.widgets.gmail, function(widget, args)
-		    local newMail = tonumber(args["{count}"])
-    if newMail > 0 then
-       mailicon:set_image(beautiful.mail)
-    else
-       mailicon:set_image(beautiful.mailopen)
-    end
-						  end, 15)
+-- vicious.register(mailicon, vicious.widgets.gmail, function(widget, args)
+-- 		    local newMail = tonumber(args["{count}"])
+--     if newMail > 0 then
+--        mailicon:set_image(beautiful.mail)
+--     else
+--        mailicon:set_image(beautiful.mailopen)
+--     end
+-- 						  end, 15)
 
 -- to make GMail pop up when pressed:
-mailicon:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn_with_shell(browser .. " gmail.com") end)))
+--mailicon:buttons(awful.util.table.join(awful.button({ }, 1, function () awful.util.spawn_with_shell(browser .. " gmail.com") end)))
 
 -- -- Create a textclock widget
 mytextclock = awful.widget.textclock()
@@ -149,6 +149,9 @@ mytextclock = awful.widget.textclock()
  -- Wifi widget
 wifiwidget = wibox.widget.textbox() 
 vicious.register(wifiwidget, vicious.widgets.wifi,   " <span color='#CC9393'>${ssid}:</span>${sign}:",5,wlan)
+-- Thermal widget
+--thermalwidget = wibox.widget.textbox()
+--vicious.register(thermalwidget, vicious.widgets.thermal, "$1°", 19, "")
 
 mywibox = {}
 mypromptbox = {}
@@ -226,7 +229,7 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
-    right_layout:add(mailicon)
+    -- right_layout:add(mailicon)
     right_layout:add(wifiwidget)
     right_layout:add(netwidget)
     right_layout:add(volume)
