@@ -1,0 +1,14 @@
+URxvt*termName: xterm
+URxvt*shading: 50
+URxvt*background: #CACACA
+URxvt*transparent: true
+URxvt*reverseVideo: true
+URxvt*cursorBlink: true
+
+!Убираем скролл
+URxvt*scrollBar: false
+
+! Небольшой отступ от краев окна для лучшего восприятия
+! URxvt*internalBorder: 100
+! Наш шрифт
+URxvt*font: xft:AnonymousPro:bold:size=10
