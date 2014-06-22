@@ -40,9 +40,9 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/flawless-gentoo/.config/awesome/default/theme.lua")
+beautiful.init("~/.config/awesome/default/theme.lua")
 
-awful.util.spawn("feh --bg-scale /home/flawless-gentoo/images/awesome-walpaper")
+awful.util.spawn("feh --bg-scale ~/images/awesome-walpaper")
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
 editor = os.getenv("EDITOR") or "nano"
@@ -261,7 +261,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
     --screenshots
-    awful.key({			  }, "Print",   function() awful.util.spawn("scrot /home/flawless-gentoo/images/shots/%Y-%m-%d-%H-%M-%S_scrot.png") end),
+    awful.key({			  }, "Print",   function() awful.util.spawn("scrot ~/images/shots/%Y-%m-%d-%H-%M-%S_scrot.png") end),
     --sound
     awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 1%+") end),
     awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 1%-") end),
@@ -311,8 +311,8 @@ globalkeys = awful.util.table.join(
 
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
     -- Wine
-    awful.key({ modkey,           }, "c", function () awful.util.spawn("env WINEPREFIX='/home/flawless-gentoo/media/.wine-1c/' wine '/home/flawless-gentoo/media/.wine-1c/drive_c/Program Files (x86)/1cv82/common/1cestart.exe'") end),
-    awful.key({ modkey,           }, "v", function () awful.util.spawn("env WINEPREFIX='/home/flawless-gentoo/media/.wine-wow/' wine '/home/flawless-gentoo/media/soft/windows/World-of-Warcraft-Setup-enGB.exe'") end),
+    awful.key({ modkey,           }, "c", function () awful.util.spawn("env WINEPREFIX='~/media/.wine-1c/' wine '~/media/.wine-1c/drive_c/Program Files (x86)/1cv82/common/1cestart.exe'") end),
+    awful.key({ modkey,           }, "v", function () awful.util.spawn("env WINEPREFIX='~/media/.wine-wow/' wine '~/media/soft/windows/World-of-Warcraft-Setup-enGB.exe'") end),
 
 
     -- Prompt

@@ -3,7 +3,7 @@
 ---------------------------
 
 theme = {}
-set_dir = '/home/flawless-gentoo/.config/awesome'
+set_dir = '~/.config/awesome'
 
 --OrangeRed	#FF4500
 --FireBrick	#B22222
